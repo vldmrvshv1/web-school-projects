@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function f_ausrechnen() {
+var milli = 0; var kika = 0;
+milli = document.getElementById("milli").value;
+kika = milli * 0.5;
+document.getElementById("kika").value = kika;
+}
+</script>
+<meta charset="utf-8" />
+<title>Kalorienrechner</title>
+</head>
+<body>
+<h1>Wie viele Kalorien trinke ich?</h1>
+<table>
+<tr>
+	<td>Milliliter Cola:</td>
+	<td><input id="milli" type="text"></td>
+</tr>
+<tr>
+	<td>Kilokalorien:</td>
+	<td><input id="kika" type="text"></td>
+</tr>
+<tr>
+	<td><button onclick="f_ausrechnen();" type="button">Ausrechnen</button></td>
+	<td></td>
+</tr>
+</table>
+</body>
+</html>

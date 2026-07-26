@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="styles.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+function fu_berechnung() {
+//Variablendeklaration und Initialisierung
+var radius = 0;
+var dm = 0;
+var umfang = 0;
+var flaeche = 0;
+//Typenkonvertierung
+radius = document.getElementById("radius").value;
+radius = parseFloat(radius);
+//Verarbeitung
+dm = 2*radius;
+umfang = 2*Math.PI*radius;
+flaeche = Math.PI*Math.pow(radius,2);
+//Anzahl der Dezimalstellen
+dm = dm.toFixed(2);
+umfang = umfang.toFixed(2);
+flaeche = flaeche.toFixed(2);
+//Ausgabe
+document.getElementById("dm").value = dm;
+document.getElementById("umfang").value = umfang;
+document.getElementById("flaeche").value = flaeche;
+}
+</script>
+<meta charset="utf-8" />
+<title>Kreisberechnungen</title>
+</head>
+<body>
+<h1>Berechnungen rund um den Kreis</h1>
+<form>
+<label>Radius:</label>
+<input id="radius" type="text"><br>
+<label>Durchschnitt:</label>
+<input readonly="readonly" id="dm" type="text"><br>
+<label>Umfang:</label>
+<input readonly="readonly" id="umfang" type="text"><br>
+<label>Fläche:</label>
+<input readonly="readonly" id="flaeche" type="text"><br>
+<p>
+<button onclick="fu_berechnung();" type="button">Ausrechnen</button>
+</p>
+</form>
+</body>
+</html>
